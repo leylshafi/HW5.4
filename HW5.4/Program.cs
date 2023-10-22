@@ -19,6 +19,7 @@ namespace HW5._4
         }
         public static void Menu()
         {
+            Console.Clear();
             Console.WriteLine(@"======= ANA MENYU =======
 [1] New Library
 [2] New Category
@@ -58,6 +59,8 @@ namespace HW5._4
                         Console.WriteLine(ex.Message);
                         Choose(1);
                     }
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     break;
                 case 2:
                     Console.WriteLine("Enter category name: ");
@@ -82,6 +85,8 @@ namespace HW5._4
                         Console.WriteLine(ex.Message);
                         Choose(2);
                     }
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     break;
                 case 3:
                     if (categories.Count > 0)
@@ -144,6 +149,8 @@ namespace HW5._4
                         }
                     }
                     else Console.WriteLine("There is no category to create a book");
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     break;
                 case 4:
                     if (libraries.Count > 0)
@@ -175,6 +182,8 @@ namespace HW5._4
                         
                     }
                     else Console.WriteLine("There is no library to enter");
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     break;
                 case 5:
                     Console.WriteLine("Good bye");
@@ -182,6 +191,8 @@ namespace HW5._4
                     break;
                 default:
                     Console.WriteLine("Wrong input");
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     Menu();
                     break;
             }
@@ -247,15 +258,21 @@ namespace HW5._4
                         }
                     }
                     else Console.WriteLine("There is no book to add");
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     break;
                 case 2:
                     library.ListAllBooks();
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     break;
                 case 3:
                     Menu();
                     break;
                 default:
                     Console.WriteLine("Wrong input");
+                    Console.WriteLine("\n[Press Enter]\n");
+                    Console.ReadLine();
                     LibraryMenu(library);
                     break;
             }
